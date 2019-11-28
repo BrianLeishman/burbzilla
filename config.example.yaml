@@ -1,0 +1,10 @@
+boards:
+- address: 0x4a
+  type: ads1115
+  sensors:
+    tps:
+      type: volts
+      channel: 0
+    oil:
+      type: volts
+      channel: 1
