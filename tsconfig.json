@@ -1,12 +1,14 @@
 {
     "compilerOptions": {
-      "target": "es6",
-      "module": "commonjs",
-      "removeComments": true,
-      "outDir": "static/js",
-      "sourceMap": true
+        "strict": true,
+        "target": "es6",
+        "module": "commonjs",
+        "removeComments": true,
+        "outDir": "static/js",
+        "sourceMap": true
     },
     "include": [
+        "static/js/canvasjs.min.js",
         "ts/*"
     ]
-  }
+}

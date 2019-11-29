@@ -1,11 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"time"
+
+	cmap "github.com/orcaman/concurrent-map"
 
 	"github.com/MichaelS11/go-ads"
 )
+
+var sensors = cmap.New()
 
 func read() {
 	for {
@@ -48,7 +51,7 @@ func read() {
 				err = ads1.Close()
 				check(err)
 
-				fmt.Printf("%s: % 12f\n", name, float64(result)/((1<<15)-1)*6.144)
+				sensors.Set(name, result)
 			}
 		}
 		time.Sleep(time.Millisecond)

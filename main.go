@@ -30,8 +30,9 @@ func main() {
 
 	// start the sensor read loop
 	// based on the sensors in conf
-	// go read()
+	go read()
 
+	http.HandleFunc("/socket", socket)
 	http.Handle("/", http.FileServer(http.Dir("static")))
 
 	go func() {
