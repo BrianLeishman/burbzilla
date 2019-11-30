@@ -1,0 +1,339 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x03_Female J3
+U 1 1 5DE49D79
+P 3650 1300
+F 0 "J3" H 3678 1326 50  0000 L CNN
+F 1 "Oil Preassure" H 3678 1235 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 3650 1300 50  0001 C CNN
+F 3 "~" H 3650 1300 50  0001 C CNN
+	1    3650 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DE4D236
+P 3400 1100
+F 0 "#PWR?" H 3400 950 50  0001 C CNN
+F 1 "+5V" H 3415 1273 50  0000 C CNN
+F 2 "" H 3400 1100 50  0001 C CNN
+F 3 "" H 3400 1100 50  0001 C CNN
+	1    3400 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1300 3300 1300
+Wire Wire Line
+	3450 1200 3400 1200
+Wire Wire Line
+	3400 1200 3400 1100
+Wire Wire Line
+	3450 1400 3400 1400
+$Comp
+L Connector:Conn_01x03_Female J4
+U 1 1 5DE56E5A
+P 3650 2300
+F 0 "J4" H 3678 2326 50  0000 L CNN
+F 1 "TPS" H 3678 2235 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 3650 2300 50  0001 C CNN
+F 3 "~" H 3650 2300 50  0001 C CNN
+	1    3650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DE56E60
+P 3400 2100
+F 0 "#PWR?" H 3400 1950 50  0001 C CNN
+F 1 "+5V" H 3415 2273 50  0000 C CNN
+F 2 "" H 3400 2100 50  0001 C CNN
+F 3 "" H 3400 2100 50  0001 C CNN
+	1    3400 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2300 3300 2300
+Wire Wire Line
+	3450 2200 3400 2200
+Wire Wire Line
+	3400 2200 3400 2100
+Wire Wire Line
+	3450 2400 3400 2400
+Wire Wire Line
+	3400 2400 3400 2500
+$Comp
+L ADS1115:ADS1115 U1
+U 1 1 5DE624E5
+P 4250 4100
+F 0 "U1" H 4275 4625 50  0000 C CNN
+F 1 "ADS1115" H 4275 4534 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical" H 4250 3600 50  0001 C CNN
+F 3 "" H 4200 4400 50  0001 C CNN
+	1    4250 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DE6A4B9
+P 3450 3750
+F 0 "#PWR?" H 3450 3600 50  0001 C CNN
+F 1 "+5V" H 3465 3923 50  0000 C CNN
+F 2 "" H 3450 3750 50  0001 C CNN
+F 3 "" H 3450 3750 50  0001 C CNN
+	1    3450 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE6B572
+P 3450 4500
+F 0 "#PWR?" H 3450 4250 50  0001 C CNN
+F 1 "GND" H 3455 4327 50  0000 C CNN
+F 2 "" H 3450 4500 50  0001 C CNN
+F 3 "" H 3450 4500 50  0001 C CNN
+	1    3450 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3800 3450 3800
+Wire Wire Line
+	3450 3800 3450 3750
+Wire Wire Line
+	3500 4400 3450 4400
+Wire Wire Line
+	3450 4400 3450 4500
+Wire Wire Line
+	3500 3900 3300 3900
+Wire Wire Line
+	3500 4000 3300 4000
+Text GLabel 3300 3900 0    50   Input ~ 0
+SCL
+Text GLabel 3300 4000 0    50   Input ~ 0
+SDA
+Text GLabel 3400 1500 3    50   Input ~ 0
+SIG_OIL
+Wire Wire Line
+	3400 1400 3400 1500
+Text GLabel 3400 2500 3    50   Input ~ 0
+TPS
+Text GLabel 5050 4100 2    50   Input ~ 0
+SIG_OIL
+Text GLabel 5050 4200 2    50   Input ~ 0
+TPS
+NoConn ~ 5050 3800
+NoConn ~ 5050 3900
+NoConn ~ 5050 4400
+$Comp
+L Device:R R1
+U 1 1 5DE85954
+P 4800 1550
+F 0 "R1" H 4870 1596 50  0000 L CNN
+F 1 "100k (1%)" H 4870 1505 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4730 1550 50  0001 C CNN
+F 3 "~" H 4800 1550 50  0001 C CNN
+	1    4800 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5DE87C90
+P 4800 2000
+F 0 "R2" H 4870 2046 50  0000 L CNN
+F 1 "33.3k (1%)" H 4870 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4730 2000 50  0001 C CNN
+F 3 "~" H 4800 2000 50  0001 C CNN
+	1    4800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE88F7D
+P 4800 2250
+F 0 "#PWR?" H 4800 2000 50  0001 C CNN
+F 1 "GND" H 4805 2077 50  0000 C CNN
+F 2 "" H 4800 2250 50  0001 C CNN
+F 3 "" H 4800 2250 50  0001 C CNN
+	1    4800 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT CarBattery
+U 1 1 5DE898D2
+P 4800 1250
+F 0 "CarBattery" H 4888 1333 50  0000 L CNN
+F 1 "+BATT" H 4888 1242 50  0000 L CNN
+F 2 "" H 4800 1250 50  0001 C CNN
+F 3 "" H 4800 1250 50  0001 C CNN
+	1    4800 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1250 4800 1400
+Wire Wire Line
+	4800 1700 4800 1750
+Wire Wire Line
+	4800 2150 4800 2250
+Wire Wire Line
+	4800 1750 5250 1750
+Connection ~ 4800 1750
+Wire Wire Line
+	4800 1750 4800 1850
+Text GLabel 5250 1750 2    50   Input ~ 0
+BatteryLevel
+Text GLabel 5050 4300 2    50   Input ~ 0
+BatteryLevel
+Text Notes 5650 1050 2    50   ~ 0
+10 MΩ load\n20V -> 5V voltage divider\n~3mw
+Wire Wire Line
+	1950 2350 1950 2450
+Wire Wire Line
+	2050 2350 1950 2350
+Wire Wire Line
+	1950 2250 1950 2100
+Wire Wire Line
+	2050 2250 1950 2250
+$Comp
+L power:GND #PWR?
+U 1 1 5DEAD9F9
+P 1950 2450
+F 0 "#PWR?" H 1950 2200 50  0001 C CNN
+F 1 "GND" H 1955 2277 50  0000 C CNN
+F 2 "" H 1950 2450 50  0001 C CNN
+F 3 "" H 1950 2450 50  0001 C CNN
+	1    1950 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT CarBattery
+U 1 1 5DEA9C30
+P 1950 2100
+F 0 "CarBattery" H 2038 2183 50  0000 L CNN
+F 1 "+BATT" H 2038 2092 50  0000 L CNN
+F 2 "" H 1950 2100 50  0001 C CNN
+F 3 "" H 1950 2100 50  0001 C CNN
+	1    1950 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5DEA3FE5
+P 2250 2250
+F 0 "J2" H 2330 2242 50  0000 L CNN
+F 1 "Car Battery Interface" H 2330 2151 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2250 2250 50  0001 C CNN
+F 3 "~" H 2250 2250 50  0001 C CNN
+	1    2250 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 1950 1850 0    50   Input ~ 0
+SDA
+Text GLabel 1950 1750 0    50   Input ~ 0
+SCL
+$Comp
+L power:GND #PWR?
+U 1 1 5DE82D3F
+P 1850 1650
+F 0 "#PWR?" H 1850 1400 50  0001 C CNN
+F 1 "GND" V 1855 1522 50  0000 R CNN
+F 2 "" H 1850 1650 50  0001 C CNN
+F 3 "" H 1850 1650 50  0001 C CNN
+	1    1850 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DE8288B
+P 1950 1450
+F 0 "#PWR?" H 1950 1300 50  0001 C CNN
+F 1 "+5V" H 1965 1623 50  0000 C CNN
+F 2 "" H 1950 1450 50  0001 C CNN
+F 3 "" H 1950 1450 50  0001 C CNN
+	1    1950 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1650 2050 1650
+Wire Wire Line
+	2050 1850 1950 1850
+Wire Wire Line
+	2050 1750 1950 1750
+Wire Wire Line
+	1950 1550 1950 1450
+Wire Wire Line
+	2050 1550 1950 1550
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5DE7FCCB
+P 2250 1650
+F 0 "J1" H 2330 1642 50  0000 L CNN
+F 1 "PI Interface" H 2330 1551 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2250 1650 50  0001 C CNN
+F 3 "~" H 2250 1650 50  0001 C CNN
+	1    2250 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE56E66
+P 3300 2300
+F 0 "#PWR?" H 3300 2050 50  0001 C CNN
+F 1 "GND" H 3305 2127 50  0000 C CNN
+F 2 "" H 3300 2300 50  0001 C CNN
+F 3 "" H 3300 2300 50  0001 C CNN
+	1    3300 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE4EF1A
+P 3300 1300
+F 0 "#PWR?" H 3300 1050 50  0001 C CNN
+F 1 "GND" H 3305 1127 50  0000 C CNN
+F 2 "" H 3300 1300 50  0001 C CNN
+F 3 "" H 3300 1300 50  0001 C CNN
+	1    3300 1300
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4300 800  4300 2850
+Wire Notes Line
+	4300 2850 1400 2850
+Wire Notes Line
+	1400 2850 1400 800 
+Wire Notes Line
+	1400 800  4300 800 
+Text Notes 1850 900  2    50   ~ 0
+Connectors
+Wire Notes Line
+	4550 2850 5900 2850
+Wire Notes Line
+	5900 2850 5900 750 
+Wire Notes Line
+	5900 750  4550 750 
+Wire Notes Line
+	4550 750  4550 2850
+Wire Notes Line
+	1200 2950 1200 5100
+Wire Notes Line
+	1200 5100 5900 5100
+Wire Notes Line
+	5900 5100 5900 2950
+Wire Notes Line
+	5900 2950 1200 2950
+Text Notes 1400 3050 2    50   ~ 0
+ADCs
+$EndSCHEMATC
